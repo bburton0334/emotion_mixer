@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>Emotion Mixer</title>
+        <link rel="stylesheet" href="./stylesheet.css">
+        <script src="./backend.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Koulen&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrapperMain">
+            <div class="wrapperLeft">
+                <div class="bar">
+                    <div class="leftA">
+                        <h2 class="aboutTitle">ABOUT</h2>
+                    </div>
+                    <div class="rightA">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="menu">
+                    <div class="links">
+                        <ul class="links__list" style="--item-total:8">
+                          <li class="links__item" style="--item-count:1">
+                            <a class="links__link" href="#" onclick="emotion_click('anger')">
+                                <img class="red" src="./assets/circle.png" style="width:70px;"/>
+                              <span class="links__text">ANGER</span>
+                            </a>
+                          </li>
+                          <li class="links__item" style="--item-count:2">
+                            <a class="links__link" href="#" onclick="emotion_click('anticipation')">
+                                <img class="orange" src="./assets/circle.png" style="width:70px;"/>
+                              <span class="links__text">ANTICIPATION</span></a>
+                          </li>
+                          <li class="links__item" style="--item-count:3">
+                            <a class="links__link" href="#" onclick="emotion_click('joy')">
+                                <img class="brightYellow" src="./assets/circle.png" style="width:70px;"/>
+                              <span class="links__text">JOY</span></a>
+                          </li>
+                          <li class="links__item" style="--item-count:4">
+                            <a class="links__link" href="#" onclick="emotion_click('trust')">
+                                <img class="green" src="./assets/circle.png" style="width:70px;"/>
+                              <span class="links__text">TRUST</span></a>
+                          </li>
+                          <li class="links__item" style="--item-count:5">
+                            <a class="links__link" href="#" onclick="emotion_click('fear')">
+                                <img class="darkGreen" src="./assets/circle.png" style="width:70px;"/>
+                              <span class="links__text">FEAR</span></a>
+                          </li>
+                              <li class="links__item" style="--item-count:6">
+                            <a class="links__link" href="#" onclick="emotion_click('suprise')">
+                              <img class="blue" src="./assets/circle.png" style="width:70px;"/>
+                              <span class="links__text">SUPRISE</span>
+                            </a>
+                          </li>
+                                  <li class="links__item" style="--item-count:7">
+                            <a class="links__link" href="#" onclick="emotion_click('sadness')">
+                              <img class="darkBlue" src="./assets/circle.png" style="width:70px;"/>
+                              <span class="links__text">SADNESS</span>
+                            </a>
+                          </li>
+                                  <li class="links__item" style="--item-count:8">
+                            <a class="links__link" href="#" onclick="emotion_click('disgust')">
+                              <img class="purple" src="./assets/circle.png" style="width:70px;"/>
+                              <span class="links__text">DISGUST</span>
+                            </a>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapperRight">
+                <div id="titles" class="emotionSubTitle" style="visibility: hidden;">
+                    <h2 id="mixEmotion" class="aboutTitle">JOY + ANTICIPATION</h2>
+                    <h1 id="emotionName" class="emotionPicked">OPTIMISM</h1>
+                </div>
+                <div id="colors" class="emotions" style="visibility: hidden;">
+                    <div id="emotion1" class="emotionColor1">
+                        <img id="imgEmot1" class="orange" src="./assets/circle.png" style="width:50vh;">
+                    </div>
+                    <div id="emotion2" class="emotionColor2">
+                        <img id="imgEmot2" class="yellow" src="./assets/circle.png" style="width:50vh;">
+                    </div>
+                </div>
+                <div id="descriptions" class="emotionDescription" style="visibility: hidden;">
+                    <div class="generalDescription">
+                        <p class="spacing" id="genDesc">Hopefullness and confidence about the future of the successful outcome of something.</p>
+                    </div>
+                    <div class="detailedDescription">
+                        <p class="spacing" style="font-weight: bolder;">Similar words:</p>
+                        <p class="spacing" id="similarWords">Hopefull, looking forward</p>
+                        <p class="spacing" style="font-weight: bolder; margin-top: 5px;">Typical sensations:</p>
+                        <p class="spacing" id="typicalSensations">Energized</p>
+                        <p class="spacing" style="font-weight: bolder; margin-top: 5px;">What is it telling you?</p>
+                        <p class="spacing" id="telling">The future is better than the present</p>
+                        <p class="spacing" id="help"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
